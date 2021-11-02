@@ -41,7 +41,7 @@ Docker Container Image Build Script of Triton Inference Server for Jetson
     Enter it again: (Input your FTP Password again)
     ```
 
-1. To stop the servers, execute the following command.
+1. To stop the servers, execute the following command from another terminal.
     ```
     ./scripts/compose_down.sh
     ```

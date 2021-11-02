@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+
+  ftp:
+    image: "gists/pure-ftpd"
+    container_name: "pure-ftpd"
+    ports:
+      - "21:21"
+      - "30000-30009:30000-30009"
+    volumes:
+      - "${FTPD_HOST_PATH}:/etc/pureftpd"
+      - "${FTP_HOST_PATH}:/home/ftpuser"
+
+  inference:
+    build:
+      context: ./
+      args:
+        - BASE_IMAGE=${BASE_IMAGE}
+    image: triton_test:l4t-r${L4T_VERSION}
+    network_mode: "host"
+    runtime: "nvidia"
+    volumes:
+      - "${MODEL_REPO_HOST_PATH}:${MODEL_REPO_CONTAINER_PATH}"
+    depends_on:
+      - "ftp"
+    command: ./bin/tritonserver --model-repository=${MODEL_REPO_CONTAINER_PATH} --backend-directory=./backends --backend-config=tensorflow,version=2 --model-control-mode=explicit
+  

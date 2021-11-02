@@ -35,9 +35,11 @@ Docker Container Image Build Script of Triton Inference Server for Jetson
     ./scripts/set_ftp_pw.sh
     ```
     The first prompt you will see may be for the sudo password. The second and third prompt will be for the FTP password.<br>
-    [sudo] password for *xxx*:<br>
-    Password: *<=Input your FTP Password* <br>
-    Enter it again: *<=Input your FTP Password again*
+    ```
+    [sudo] password for xxx: (Input the sudo password)
+    Password: (Input your FTP Password)
+    Enter it again: (Input your FTP Password again)
+    ```
 
 1. To stop the servers, execute the following command.
     ```

@@ -1,7 +1,7 @@
 ARG BASE_IMAGE=nvcr.io/nvidia/l4t-base:r32.6.1
 FROM ${BASE_IMAGE}
 
-ARG RELEASE_FILE_URL="https://github.com/triton-inference-server/server/releases/download/v2.16.0/tritonserver2.16.0-jetpack4.6.tgz"
+ARG RELEASE_FILE_URL="https://github.com/triton-inference-server/server/releases/download/v2.17.0/tritonserver2.17.0-jetpack4.6.tgz"
 ARG TRITON_PATH=/triton
 
 ENV DEBIAN_FRONTEND=noninteractive

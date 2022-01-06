@@ -23,7 +23,7 @@ Docker Container Image Build Script of Triton Inference Server for Jetson
     ./scripts/docker_build.sh
     ```
 
-## Usage
+## Usage (Run Triton Inference Server Only)
 
 ```
 ./scripts/docker_run.sh

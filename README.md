@@ -25,6 +25,12 @@ Docker Container Image Build Script of Triton Inference Server for Jetson
 
 ## Usage
 
+```
+./scripts/docker_run.sh
+```
+
+## Usage (Run Triton Inference Server with FTP Service)
+
 1. Start the Triton Inference Server and the gists/pure-ftpd FTP server.
     ```
     ./scripts/compose_up.sh
